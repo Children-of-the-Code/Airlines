@@ -29,8 +29,7 @@ to somewhere other than standard out (such as to a file)-->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
-            <version>1.8.0-beta4</version>
-            <scope>test</scope>
+            <version>1.7.31</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->

@@ -6,6 +6,10 @@ public class Flight {
     private String arrivalCity;
     private Status status;
 
+    public Flight(){
+
+    }
+
     public enum Status{
         ONTIME,
         CANCELLED,
