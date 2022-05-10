@@ -1,0 +1,9 @@
+My model:
+a model of the real-world things that we're trying to represent
+In your case, you're trying to represent users and reimbursements
+In my case, I want to represent airlines and flights
+
+We need a couple things:
+our fields - the variables in an object that store its respective information
+flight - (airline ID, flight ID, plane type, destination, departing city, status (this will also be an enum))
+airline - airline name, airline ID

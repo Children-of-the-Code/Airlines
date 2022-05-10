@@ -1,0 +1,8 @@
+for the present, i'm going to ignore having a DAO layer,
+even though in a real application, we will have a DAO layer that is intended to manage persistence,
+(java memory is cleared when the program stops running)
+for the present moment, the project requirements to not contain DAO layer,
+we don't intending persistence at the moment anyways
+
+what service methods do i need?
+ultimately, i need everything that is required by my controllers

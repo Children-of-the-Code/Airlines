@@ -1,0 +1,30 @@
+my controller class is for managing my web endpoints
+the reason it's called a 'controller' is because if we were to program it manually,
+it would be something like a massive switching station for which we divert incoming http requests
+to their proper handlers
+
+we should define what our goals for how we should interact with the web
+
+i want to get all flight information
+i want to get a single flight information
+i want to get all airlines
+
+i want to post a flight
+
+i want to update a flight
+
+think of endpoints in the context of a real website -
+what are the total amount of endpoints needed to make a website function?
+for instance, facebook
+at minimum -
+
+post a new account
+get some security get using login info
+post a friend request
+get all friend requests
+get a user's profile
+get messages
+post a message
+get likes
+post like
+update profile
