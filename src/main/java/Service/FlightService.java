@@ -8,6 +8,11 @@ public class FlightService {
     ArrayList<Flight> flightArrayList;
     public FlightService(){
         flightArrayList = new ArrayList<>();
+        addFlight(new Flight("Tampa", "New York City", Flight.Status.ONTIME));
+        addFlight(new Flight("Chicago", "New York City", Flight.Status.ONTIME));
+        addFlight(new Flight("Chicago", "Los Angeles", Flight.Status.DELAYED));
+
+
     }
     public ArrayList<Flight> getAllFlights(){
         return flightArrayList;

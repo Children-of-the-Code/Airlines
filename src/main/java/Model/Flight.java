@@ -11,6 +11,13 @@ public class Flight {
 
     }
 
+    public Flight(String departingCity, String arrivalCity, Status status) {
+        this.flightID = flightID;
+        this.departingCity = departingCity;
+        this.arrivalCity = arrivalCity;
+        this.status = status;
+    }
+
     public enum Status{
         ONTIME,
         CANCELLED,

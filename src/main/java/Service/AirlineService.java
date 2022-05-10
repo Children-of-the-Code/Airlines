@@ -11,7 +11,7 @@ public class AirlineService {
 //    we'll learn how this is done thursday
     ArrayList<Airline> airlineArrayList;
     public AirlineService(){
-
+        airlineArrayList = new ArrayList<>();
     }
     public void addAirline(Airline airline){
         airlineArrayList.add(airline);
