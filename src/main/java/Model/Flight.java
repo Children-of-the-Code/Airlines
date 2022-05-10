@@ -1,6 +1,7 @@
 package Model;
 
 public class Flight {
+//    this flight id has nothing to do with the physical flight id...
     private int flightID;
     private String departingCity;
     private String arrivalCity;

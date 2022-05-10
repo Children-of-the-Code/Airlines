@@ -28,7 +28,7 @@ public class AirController {
 //            I want to return a json of all flights
             context.json(flightService.getAllFlights());
         });
-        app.get("flight/{id}", context -> {
+        app.get("flight/flightID/{id}", context -> {
 //            I want to return a json of a single flight
             int flightID = Integer.parseInt(context.pathParam("id"));
             context.json(flightService.getFlight(flightID));
@@ -43,20 +43,26 @@ public class AirController {
             Flight flightToBeAdded = mapper.readValue(context.body(), Flight.class);
             flightService.addFlight(flightToBeAdded);
         });
-        app.put("flight/{id}", context -> {
+        app.put("flight", context -> {
 //            I just want to update an existing flight's status
 //            parse: a string can not be easily converted to a int, right -
 //            java has a utility for us to gather a number from a string character by character
 //            so, if we have a string "123" we need to convert it to a number 123
-            int flightID = Integer.parseInt(context.pathParam("id"));
             ObjectMapper mapper = new ObjectMapper();
             Flight flightToBeUpdated = mapper.readValue(context.body(), Flight.class);
-            flightService.updateFlight(flightToBeUpdated, flightID);
+            flightService.updateFlight(flightToBeUpdated);
         });
         app.post("airline", context -> {
             ObjectMapper mapper = new ObjectMapper();
             Airline airlineToBePosted = mapper.readValue(context.body(), Airline.class);
             airlineService.addAirline(airlineToBePosted);
+        });
+        app.delete("flight/flightID/{id}", context -> {
+            int flightID = Integer.parseInt(context.pathParam("id"));
+            flightService.deleteFlight(flightID);
+        });
+        app.get("flight/cancelled", context -> {
+            context.json(flightService.getAllCancelledFlights());
         });
     }
 
